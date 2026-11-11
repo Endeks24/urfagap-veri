@@ -9,7 +9,7 @@ def tl(x): return f"{x:,.2f}".replace(",","X").replace(".",",").replace("X",".")
 def tr0(x): return f"{abs(round(x)):,}".replace(",",".")
 d=json.load(open(VERI,encoding="utf-8"));ik,br=d["borsa_ikincil"],d["borsa"]
 t_ik=ik["satirlar"][0]["tarih"];t_br=br["son_bulten_tarihi"]
-get=lambda rows,n:next(s for s in rows if s["urun"]==n)
+get=lambda rows,n:next((s for s in rows if s["urun"]==n),None)
 ICP={"pamuk":'<circle cx="8.5" cy="9.5" r="3.6"/><circle cx="15.5" cy="9.5" r="3.6"/><circle cx="12" cy="6.3" r="3.3"/><path d="M7.5 14.2 12 21l4.5-6.8M12 12v9"/>',
 "preseli":'<rect x="3.5" y="7" width="17" height="11" rx="2.2"/><path d="M9 7v11M15 7v11M3.5 12.5h17"/><path d="M8 4.5h8"/>',
 "bugday":'<path d="M12 21V8"/><path d="M12 8c-2.6 0-4-1.6-4-4 2.6 0 4 1.6 4 4zM12 8c2.6 0 4-1.6 4-4-2.6 0-4 1.6-4 4z"/><path d="M12 14c-2.6 0-4-1.6-4-4 2.6 0 4 1.6 4 4zM12 14c2.6 0 4-1.6 4-4-2.6 0-4 1.6-4 4z"/><path d="M12 20c-2.6 0-4-1.6-4-4 2.6 0 4 1.6 4 4zM12 20c2.6 0 4-1.6 4-4-2.6 0-4 1.6-4 4z"/>',
@@ -19,12 +19,13 @@ ICP={"pamuk":'<circle cx="8.5" cy="9.5" r="3.6"/><circle cx="15.5" cy="9.5" r="3
 "mercimek":'<ellipse cx="8" cy="9" rx="3.6" ry="2.6" transform="rotate(-25 8 9)"/><ellipse cx="16" cy="10" rx="3.6" ry="2.6" transform="rotate(20 16 10)"/><ellipse cx="11.5" cy="16" rx="3.6" ry="2.6" transform="rotate(-8 11.5 16)"/>'}
 def ic(k): return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICP[k]}</svg>'
 P=[("pamuk","Kütlü pamuk","Kütlü Pamuk"),("preseli","Preseli pamuk","Preseli Pamuk St.1 Beyaz"),("bugday","Buğday","Buğday"),("misir","Mısır","Mısır"),("aycicegi","Ayçiçeği","Ayçiçeği")]
-rows=[(k,n,get(ik["satirlar"],u)) for k,n,u in P]
-CROPS=[("pamuk","Kütlü pamuk",get(ik["satirlar"],"Kütlü Pamuk")["ortalama"],520,[2250,3100,2150,2450],1250),
-("mercimek","Kırmızı mercimek",get(br["satirlar"],"Kırmızı Kabuklu Mercimek")["ortalama"],185,[1320,1650,1280,1150],400),
-("bugday","Buğday",get(ik["satirlar"],"Buğday")["ortalama"],480,[1680,2350,1420,1180],780),
-("misir","Mısır",get(ik["satirlar"],"Mısır")["ortalama"],1150,[2100,3450,2200,1950],1450),
-("fistik","Boz kavlak fıstık",get(br["satirlar"],"Fıstık Boz Kavlak")["ortalama"],140,[2850,4100,4950,11200],1100)]
+rows=[(k,n,r) for k,n,u in P for r in [get(ik["satirlar"],u)] if r]
+CROPS=[("pamuk","Kütlü pamuk",(get(ik["satirlar"],"Kütlü Pamuk") or {}).get("ortalama"),520,[2250,3100,2150,2450],1250),
+("mercimek","Kırmızı mercimek",(get(br["satirlar"],"Kırmızı Kabuklu Mercimek") or {}).get("ortalama"),185,[1320,1650,1280,1150],400),
+("bugday","Buğday",(get(ik["satirlar"],"Buğday") or {}).get("ortalama"),480,[1680,2350,1420,1180],780),
+("misir","Mısır",(get(ik["satirlar"],"Mısır") or {}).get("ortalama"),1150,[2100,3450,2200,1950],1450),
+("fistik","Boz kavlak fıstık",(get(br["satirlar"],"Fıstık Boz Kavlak") or {}).get("ortalama"),140,[2850,4100,4950,11200],1100)]
+CROPS=[c for c in CROPS if c[2] is not None]
 rad=sorted([(k,n,v*f-(sum(dg)+ds)) for k,n,f,v,dg,ds in CROPS],key=lambda x:-x[2])
 CSS='''*{box-sizing:border-box;margin:0}body{width:%(W)spx;height:%(H)spx;font-family:Inter,system-ui,sans-serif;color:#fff;overflow:hidden;background:#071426;position:relative}
 .bg{position:absolute;inset:0;background:radial-gradient(70%% 50%% at 100%% 0%%,rgba(246,196,83,.28),transparent 62%%),radial-gradient(70%% 60%% at 0%% 100%%,rgba(46,144,250,.3),transparent 62%%),linear-gradient(150deg,#071426,#0b1f36 50%%,#10335a)}
@@ -70,10 +71,11 @@ def wide():
 out=OUT
 os.makedirs(out,exist_ok=True)
 SUTB=[("fistik","Boz kavlak fıstık","Fıstık Boz Kavlak"),("fistik","Kırmızı kabuklu fıstık","Fıstık Kırmızı Kabuklu"),("mercimek","Kırmızı mercimek","Kırmızı Kabuklu Mercimek"),("bugday","Makarnalık buğday","Makarnalık Buğday"),("preseli","Preseli pamuk","Preseli Pamuk 51 Renk")]
-srows=[(k,n,get(br["satirlar"],u)) for k,n,u in SUTB]
-files={"borsa_gonderi_1080x1350":borsa(1080,1350),"borsa_hikaye_1080x1920":borsa(1080,1920,PT=120,PB=120,HT=60,HS=84,LT=50,GAP=30,RP=44),
-"kar_radari_gonderi_1080x1350":radar(1080,1350,RP=14),"borsa_x_facebook_1200x630":wide()}
-if (datetime.date.today()-datetime.date.fromisoformat(t_br)).days<=7:  # eski bülteni paylaşılabilir görsele çevirme
+srows=[(k,n,r) for k,n,u in SUTB for r in [get(br["satirlar"],u)] if r]
+files={}
+if len(rows)>=3: files.update({"borsa_gonderi_1080x1350":borsa(1080,1350),"borsa_hikaye_1080x1920":borsa(1080,1920,PT=120,PB=120,HT=60,HS=84,LT=50,GAP=30,RP=44),"borsa_x_facebook_1200x630":wide()})
+if len(rad)>=3: files["kar_radari_gonderi_1080x1350"]=radar(1080,1350,RP=14)
+if len(srows)>=3 and (datetime.date.today()-datetime.date.fromisoformat(t_br)).days<=7:  # eski bülteni paylaşılabilir görsele çevirme
     files["sutb_gonderi_1080x1350"]=borsa(1080,1350,rows=srows,tarih=t_br,baslik="ŞUTB resmî<br>bülten fiyatları",kaynak="Kaynak: Şanlıurfa Ticaret Borsası (sutb.org.tr) resmî bülteni. Ortalama fiyat; çubuk aralığı gösterir.")
 for n,h in files.items(): open(f"{out}/{n}.html","w",encoding="utf-8").write(h)
 from playwright.sync_api import sync_playwright
