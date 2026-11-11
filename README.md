@@ -42,6 +42,4 @@ python urfagap_veri_botu.py veri.json
 | `docs/veri.json` | Son borsa ve Resmî Gazete verisi (sayfa ve haber kutuları bunu okur) |
 | `docs/gecmis/AAAA-AA-GG.json` | Günlük arşiv |
 | `docs/seri.json` | Ürün bazlı fiyat geçmişi; sitedeki "Fiyat geçmişi" grafiği bunu okur (en az 3 veri günü birikince görünür) |
-| `docs/sosyal/*.png` | Paylaşıma hazır görseller: borsa (gönderi, hikâye, X/Facebook), çiftçi kâr radarı, ŞUTB bülteni (bülten 7 günden eskiyse üretilmez) |
-
-Görseller her güncellemede aynı adla üzerine yazılır. Yayın adresi: `https://KULLANICI.github.io/urfagap-veri/sosyal/borsa_gonderi_1080x1350.png`
+| Actions çıktısı `sosyal-gorseller` | Paylaşıma hazır görseller (depoya yazılmaz): borsa (gönderi, hikâye, X/Facebook), çiftçi kâr radarı, ŞUTB bülteni (bülten 7 günden eskiyse üretilmez). Actions → son çalışma → Artifacts bölümünden indirilir; 14 gün saklanır. |

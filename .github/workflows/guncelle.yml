@@ -58,8 +58,16 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter
           pip install -q playwright
           python -m playwright install --with-deps chromium
-          rm -rf docs/sosyal && mkdir -p docs/sosyal
-          python sosyal_gorsel.py docs/veri.json docs/sosyal
+          rm -rf sosyal_cikti && mkdir -p sosyal_cikti
+          python sosyal_gorsel.py docs/veri.json sosyal_cikti
+
+      - name: Görselleri indirilebilir çıktı olarak yükle (depoya yazılmaz)
+        if: always() && hashFiles('sosyal_cikti/*.png') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: sosyal-gorseller
+          path: sosyal_cikti/*.png
+          retention-days: 14
 
       - name: Değişiklik varsa kaydet
         run: |
@@ -67,5 +75,4 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           # Yalnızca botun kendi dosyaları eklenir; depodaki başka hiçbir dosyaya dokunulmaz
           git add docs/veri.json docs/gecmis docs/seri.json
-          git add -A docs/sosyal 2>/dev/null || true
           git diff --cached --quiet && echo "Değişiklik yok" || (git commit -m "Veri güncellendi: $(date -u +'%F %H:%M UTC')" && git push)
