@@ -1,5 +1,5 @@
 {
-  "olusturuldu": "2026-11-11T11:20:00",
+  "olusturuldu": "2026-11-11T21:44:14",
   "borsa": {
     "kaynak": "Şanlıurfa Ticaret Borsası (resmi site)",
     "kaynak_url": "https://www.sutb.org.tr",
@@ -95,8 +95,8 @@
       {
         "urun": "Arpa",
         "en_dusuk": 13.95,
-        "ortalama": 13.95,
-        "en_yuksek": 13.95,
+        "ortalama": 14.25,
+        "en_yuksek": 14.4,
         "tarih": "2026-11-11",
         "gun_once": 0
       },
@@ -109,18 +109,26 @@
         "gun_once": 0
       },
       {
+        "urun": "Kırmızı Kabuklu Mercimek",
+        "en_dusuk": 32.0,
+        "ortalama": 41.0,
+        "en_yuksek": 50.0,
+        "tarih": "2026-11-11",
+        "gun_once": 0
+      },
+      {
         "urun": "Kütlü Pamuk",
-        "en_dusuk": 40.0,
-        "ortalama": 42.25,
-        "en_yuksek": 45.0,
+        "en_dusuk": 30.5,
+        "ortalama": 42.52,
+        "en_yuksek": 46.0,
         "tarih": "2026-11-11",
         "gun_once": 0
       },
       {
         "urun": "Preseli Pamuk St.1 Beyaz",
         "en_dusuk": 86.5,
-        "ortalama": 90.9,
-        "en_yuksek": 94.5,
+        "ortalama": 90.84,
+        "en_yuksek": 97.0,
         "tarih": "2026-11-11",
         "gun_once": 0
       },
@@ -133,17 +141,25 @@
         "gun_once": 0
       },
       {
+        "urun": "Makarnalık Buğday",
+        "en_dusuk": 18.77,
+        "ortalama": 18.77,
+        "en_yuksek": 18.77,
+        "tarih": "2026-11-11",
+        "gun_once": 0
+      },
+      {
         "urun": "Mısır",
-        "en_dusuk": 14.7,
-        "ortalama": 15.26,
+        "en_dusuk": 13.43,
+        "ortalama": 14.87,
         "en_yuksek": 16.01,
         "tarih": "2026-11-11",
         "gun_once": 0
       },
       {
         "urun": "Yaglık Çigit",
-        "en_dusuk": 20.0,
-        "ortalama": 20.39,
+        "en_dusuk": 16.0,
+        "ortalama": 18.89,
         "en_yuksek": 21.0,
         "tarih": "2026-11-11",
         "gun_once": 0
@@ -157,6 +173,14 @@
         "gun_once": 0
       },
       {
+        "urun": "Ham Yağ",
+        "en_dusuk": 61.5,
+        "ortalama": 61.5,
+        "en_yuksek": 61.5,
+        "tarih": "2026-11-11",
+        "gun_once": 0
+      },
+      {
         "urun": "Kurutulmuş Domates",
         "en_dusuk": 139.0,
         "ortalama": 139.0,
@@ -166,7 +190,5 @@
       }
     ]
   },
-  "hatalar": {
-    "resmi_gazete": "HTTPSConnectionPool(host='www.resmigazete.gov.tr', port=443): Read timed out. (read timeout=40)"
-  }
+  "hatalar": {}
 }
