@@ -99,11 +99,4 @@ def parcalar(d):
         r = get(ikr if kay == "ik" else brr, u); t = t_ik if kay == "ik" else t_br
         if r and t: sim.append({"id": i, "fiyat": r["ortalama"], "tarih": f"{trt(t)} itibarıyla"})
     if sim: P["sim"] = sim
-    # Resmî Gazete
-    if rg and rg.get("baslıklar") is not None:
-        bas = "".join(f'<li><a href="{E(x["baglanti"])}" rel="nofollow noopener" target="_blank">{E(x["baslik"])}</a></li>' for x in rg["baslıklar"])
-        es = rg.get("bolge_eslesmeleri") or []
-        rgd = ('<div class="vm-hit">' + "".join(f'<a href="{E(x["baglanti"])}" rel="nofollow noopener" target="_blank">{E(x["baslik"])}</a>' for x in es) + '</div>') if es else f'<div class="vm-clear"><span class="vm-tick">✓</span><div><strong>Bugünkü sayıda Şanlıurfa ve GAP havzasıyla ilgili başlık bulunmadı.</strong><br><small>{rg["toplam_baslik"]} başlık tarandı · {E(rg["tarih_metni"])} · Sayı {rg["sayi"]}</small></div></div>'
-        P["gazete"] = rgd + f'<details class="vm-tabledet"><summary>Taranan {rg["toplam_baslik"]} başlığı göster</summary><ul class="vm-heads">{bas}</ul></details>'
-        P["ng"] = nt("Tarama notu", f"URFA GAP Veri Merkezi, Resmî Gazete {rg['sayi']} sayısının ({E(rg['tarih_metni'])}) başlıklarını bölge anahtar kelimeleriyle tarar. Hukuki geçerlilik için yalnızca Resmî Gazete'nin kendi yayını esastır.")
     return P

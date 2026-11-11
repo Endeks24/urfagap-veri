@@ -4,8 +4,6 @@ on:
   schedule:
     # GitHub saatleri UTC'dir. 15:00 UTC = 18:00 Türkiye saati (ŞUTB seansı sonrası), hafta içi her gün.
     - cron: "0 15 * * 1-5"
-    # Sabah 09:00 TR: Resmî Gazete'nin güncel sayısı için
-    - cron: "0 6 * * 1-6"
   workflow_dispatch:   # Actions sekmesinden elle çalıştırmak için
 
 permissions:

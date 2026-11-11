@@ -109,8 +109,7 @@ def main(cikti):
     Hiçbir kaynakta SABİT/ESKİ rakam uydurulmaz: veri alınamadıysa o bölüm yoktur."""
     veri, hatalar = {"olusturuldu": datetime.datetime.now().isoformat(timespec="seconds")}, {}
     kaynaklar = [("borsa", lambda: {"kaynak": "Şanlıurfa Ticaret Borsası (resmi site)", "kaynak_url": SUTB_URL, "satirlar": sutb_oku()}),
-                 ("borsa_ikincil", lambda: {"kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)", "kaynak_url": TF_URL, "satirlar": tarimfiyatlari_oku()}),
-                 ("resmi_gazete", lambda: dict(kaynak="Resmî Gazete", kaynak_url=RG_URL, **resmi_gazete_oku()))]
+                 ("borsa_ikincil", lambda: {"kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)", "kaynak_url": TF_URL, "satirlar": tarimfiyatlari_oku()})]
     for ad, fn in kaynaklar:
         try:
             veri[ad] = fn()
