@@ -41,5 +41,6 @@ python urfagap_veri_botu.py veri.json
 |---|---|
 | `docs/veri.json` | Son borsa ve Resmî Gazete verisi (sayfa ve haber kutuları bunu okur) |
 | `docs/gecmis/AAAA-AA-GG.json` | Günlük arşiv |
+| `docs/parcalar.json` | Sitedeki URFA GAP Veri Merkezi sayfasının canlı güncellenen HTML parçaları; sayfa bunu okuyup yalnızca daha yeniyse uygular |
 | `docs/seri.json` | Ürün bazlı fiyat geçmişi; sitedeki "Fiyat geçmişi" grafiği bunu okur (en az 3 veri günü birikince görünür) |
 | Actions çıktısı `sosyal-gorseller` | Paylaşıma hazır görseller (depoya yazılmaz): borsa (gönderi, hikâye, X/Facebook), çiftçi kâr radarı, ŞUTB bülteni (bülten 7 günden eskiyse üretilmez). Actions → son çalışma → Artifacts bölümünden indirilir; 14 gün saklanır. |

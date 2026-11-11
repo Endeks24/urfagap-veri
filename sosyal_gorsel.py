@@ -20,6 +20,7 @@ ICP={"pamuk":'<circle cx="8.5" cy="9.5" r="3.6"/><circle cx="15.5" cy="9.5" r="3
 def ic(k): return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICP[k]}</svg>'
 P=[("pamuk","Kütlü pamuk","Kütlü Pamuk"),("preseli","Preseli pamuk","Preseli Pamuk St.1 Beyaz"),("bugday","Buğday","Buğday"),("misir","Mısır","Mısır"),("aycicegi","Ayçiçeği","Ayçiçeği")]
 rows=[(k,n,r) for k,n,u in P for r in [get(ik["satirlar"],u)] if r]
+if not get(ik["satirlar"],"Ayçiçeği") and get(ik["satirlar"],"Arpa"): rows.append(("bugday","Arpa",get(ik["satirlar"],"Arpa")))  # ayçiçeği listede yoksa arpa göster
 CROPS=[("pamuk","Kütlü pamuk",(get(ik["satirlar"],"Kütlü Pamuk") or {}).get("ortalama"),520,[2250,3100,2150,2450],1250),
 ("mercimek","Kırmızı mercimek",(get(br["satirlar"],"Kırmızı Kabuklu Mercimek") or {}).get("ortalama"),185,[1320,1650,1280,1150],400),
 ("bugday","Buğday",(get(ik["satirlar"],"Buğday") or {}).get("ortalama"),480,[1680,2350,1420,1180],780),

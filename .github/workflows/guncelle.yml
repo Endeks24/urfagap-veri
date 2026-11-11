@@ -52,6 +52,9 @@ jobs:
       - name: Fiyat geçmişi serisini üret (docs/seri.json)
         run: python seri_uret.py docs/gecmis docs/seri.json
 
+      - name: Sayfa parçalarını üret (docs/parcalar.json)
+        run: python sayfa_uret.py docs/veri.json docs/parcalar.json
+
       - name: Sosyal medya görsellerini üret (başarısız olsa da veri akışı durmaz)
         continue-on-error: true
         run: |
@@ -74,5 +77,5 @@ jobs:
           git config user.name  "urfagap-veri-botu"
           git config user.email "actions@users.noreply.github.com"
           # Yalnızca botun kendi dosyaları eklenir; depodaki başka hiçbir dosyaya dokunulmaz
-          git add docs/veri.json docs/gecmis docs/seri.json
+          git add docs/veri.json docs/gecmis docs/seri.json docs/parcalar.json
           git diff --cached --quiet && echo "Değişiklik yok" || (git commit -m "Veri güncellendi: $(date -u +'%F %H:%M UTC')" && git push)
