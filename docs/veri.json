@@ -1,0 +1,293 @@
+{
+  "olusturuldu": "2026-11-10T18:52:14",
+  "borsa": {
+    "kaynak": "Şanlıurfa Ticaret Borsası (resmi site)",
+    "kaynak_url": "https://www.sutb.org.tr",
+    "satirlar": [
+      {
+        "urun": "Fıstık Boz Kavlak",
+        "en_dusuk": 650.0,
+        "ortalama": 675.0,
+        "en_yuksek": 700.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Preseli Pamuk 51 Renk",
+        "en_dusuk": 92.0,
+        "ortalama": 92.0,
+        "en_yuksek": 92.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Fıstık Kırmızı Kabuklu",
+        "en_dusuk": 580.0,
+        "ortalama": 600.0,
+        "en_yuksek": 640.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Makarnalık Buğday",
+        "en_dusuk": 19.0,
+        "ortalama": 19.75,
+        "en_yuksek": 20.5,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Kırmızı Kabuklu Mercimek",
+        "en_dusuk": 40.0,
+        "ortalama": 43.5,
+        "en_yuksek": 47.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Mısır",
+        "en_dusuk": 14.8,
+        "ortalama": 14.9,
+        "en_yuksek": 15.1,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Ekmeklik Buğday",
+        "en_dusuk": 18.5,
+        "ortalama": 19.75,
+        "en_yuksek": 20.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Preseli Pamuk 31 Renk",
+        "en_dusuk": 95.0,
+        "ortalama": 95.0,
+        "en_yuksek": 95.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Preseli Pamuk 41 Renk",
+        "en_dusuk": 94.0,
+        "ortalama": 94.0,
+        "en_yuksek": 94.0,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      },
+      {
+        "urun": "Arpa",
+        "en_dusuk": 13.9,
+        "ortalama": 14.1,
+        "en_yuksek": 14.3,
+        "tarih": "2026-09-29",
+        "gun_once": 42
+      }
+    ],
+    "son_bulten_tarihi": "2026-09-29",
+    "bayat_gun": 42
+  },
+  "borsa_ikincil": {
+    "kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)",
+    "kaynak_url": "https://www.tarimfiyatlari.com.tr/borsa/sanliurfa",
+    "satirlar": [
+      {
+        "urun": "Ayçiçeği",
+        "en_dusuk": 30.52,
+        "ortalama": 31.57,
+        "en_yuksek": 32.61,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Buğday",
+        "en_dusuk": 15.0,
+        "ortalama": 18.63,
+        "en_yuksek": 20.85,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Kütlü Pamuk",
+        "en_dusuk": 28.0,
+        "ortalama": 42.17,
+        "en_yuksek": 47.4,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Preseli Pamuk St.1 Beyaz",
+        "en_dusuk": 83.0,
+        "ortalama": 90.47,
+        "en_yuksek": 96.0,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Mısır",
+        "en_dusuk": 12.57,
+        "ortalama": 14.94,
+        "en_yuksek": 16.0,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Soya Fasulyesi",
+        "en_dusuk": 30.45,
+        "ortalama": 30.45,
+        "en_yuksek": 30.45,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Yaglık Çigit",
+        "en_dusuk": 17.5,
+        "ortalama": 19.25,
+        "en_yuksek": 21.0,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Ham Pamuk Yağı",
+        "en_dusuk": 63.0,
+        "ortalama": 63.0,
+        "en_yuksek": 63.0,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Tohumluk Çiğit",
+        "en_dusuk": 23.0,
+        "ortalama": 23.0,
+        "en_yuksek": 23.0,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      },
+      {
+        "urun": "Bal",
+        "en_dusuk": 199.4,
+        "ortalama": 199.4,
+        "en_yuksek": 199.4,
+        "tarih": "2026-11-10",
+        "gun_once": 0
+      }
+    ]
+  },
+  "resmi_gazete": {
+    "kaynak": "Resmî Gazete",
+    "kaynak_url": "https://www.resmigazete.gov.tr/",
+    "tarih_metni": "10 Kasım 2026",
+    "sayi": 33426,
+    "toplam_baslik": 21,
+    "bolge_eslesmeleri": [],
+    "baslıklar": [
+      {
+        "baslik": "PDF Görüntüle",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110.pdf",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Hâkimler ve Savcılar Kuruluna Ait Kararlar",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-1.pdf",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Gençlik ve Spor Bakanlığı Yurt Hizmetleri Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-2.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "İller Bankası Anonim Şirketi İnsan Kaynakları Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-3.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Türkiye Sağlık Enstitüleri Başkanlığı Bünyesinde Oluşturulacak Bilim Kurulları Hakkında Yönetmelikte Değişiklik Yapılmasına Dair Yönetmelik",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-4.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Yeşil Mutabakat Eylem Planı (2026-2030) ile İlgili 2026/12 Sayılı Cumhurbaşkanlığı Genelgesi",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-5.pdf",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Vergi Usul Kanunu Genel Tebliği (Sıra No: 597)",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-6.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Türk Gıda Kodeksi Peynir Tebliği (No: 2026/24)",
+        "baglanti": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-7.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "a - Yargı İlânları",
+        "baglanti": "https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261110-2.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "b - Artırma, Eksiltme ve İhale İlânları",
+        "baglanti": "https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261110-3.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "c - Çeşitli İlânlar",
+        "baglanti": "https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261110-4.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "T.C. Merkez Bankasınca Belirlenen Döviz Kurları ve Devlet İç Borçlanma Senetlerinin Günlük Değerleri",
+        "baglanti": "https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261110-5.htm",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Resmî Gazete Tarihçesi",
+        "baglanti": "https://www.resmigazete.gov.tr/",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Resmî Gazete Mevzuatı",
+        "baglanti": "https://www.resmigazete.gov.tr/",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "Mevzuat Bilgi Sistemi",
+        "baglanti": "https://www.mevzuat.gov.tr/",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                        data.konu +\r\n                                        '",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                        data.url +                                        '",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                        data.konu +\r\n                                        \"",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                        data.url +                                        '",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                        data.konu +\r\n                                        \"",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                        data.url +                                        '",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                    data.konu +\r\n                                    '",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                    data.url +                                    '",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                        data.konu +\r\n                                        '",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                        data.url +                                        '",
+        "bolge_eslesmesi": false
+      },
+      {
+        "baslik": "' +\r\n                                        data.konu +\r\n                                        '",
+        "baglanti": "https://www.resmigazete.gov.tr/' +                                        data.url +                                        '",
+        "bolge_eslesmesi": false
+      }
+    ]
+  },
+  "hatalar": {}
+}

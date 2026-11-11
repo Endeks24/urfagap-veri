@@ -1,0 +1,71 @@
+name: Veri güncelle
+
+on:
+  schedule:
+    # GitHub saatleri UTC'dir. 15:00 UTC = 18:00 Türkiye saati (ŞUTB seansı sonrası), hafta içi her gün.
+    - cron: "0 15 * * 1-5"
+    # Sabah 09:00 TR: Resmî Gazete'nin güncel sayısı için
+    - cron: "0 6 * * 1-6"
+  workflow_dispatch:   # Actions sekmesinden elle çalıştırmak için
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veri-guncelle
+  cancel-in-progress: false
+
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Botu çalıştır (başarısızsa eski veri korunur, commit atılmaz)
+        run: python urfagap_veri_botu.py veri.json.yeni
+
+      - name: Doğrula ve yerine koy
+        run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open("veri.json.yeni", encoding="utf-8"))
+          ok = any(k in d for k in ("borsa", "borsa_ikincil"))
+          if not ok:
+              print("Borsa verisi yok; eski dosya korunuyor."); sys.exit(1)
+          print("Kaynaklar:", [k for k in ("borsa","borsa_ikincil","resmi_gazete") if k in d], "| Hatalar:", d.get("hatalar"))
+          PY
+          mv veri.json.yeni docs/veri.json
+
+      - name: Arşivle (günlük kopya)
+        run: |
+          mkdir -p docs/gecmis
+          cp docs/veri.json "docs/gecmis/$(date -u +%F).json"
+
+      - name: Fiyat geçmişi serisini üret (docs/seri.json)
+        run: python seri_uret.py docs/gecmis docs/seri.json
+
+      - name: Sosyal medya görsellerini üret (başarısız olsa da veri akışı durmaz)
+        continue-on-error: true
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter
+          pip install -q playwright
+          python -m playwright install --with-deps chromium
+          rm -rf docs/sosyal && mkdir -p docs/sosyal
+          python sosyal_gorsel.py docs/veri.json docs/sosyal
+
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name  "urfagap-veri-botu"
+          git config user.email "actions@users.noreply.github.com"
+          # Yalnızca botun kendi dosyaları eklenir; depodaki başka hiçbir dosyaya dokunulmaz
+          git add docs/veri.json docs/gecmis docs/seri.json
+          git add -A docs/sosyal 2>/dev/null || true
+          git diff --cached --quiet && echo "Değişiklik yok" || (git commit -m "Veri güncellendi: $(date -u +'%F %H:%M UTC')" && git push)
