@@ -1,0 +1,68 @@
+{
+  "olusturuldu": "2026-11-12T21:42:53",
+  "borsa_ikincil": {
+    "kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)",
+    "kaynak_url": "https://www.tarimfiyatlari.com.tr/borsa/sanliurfa",
+    "satirlar": [
+      {
+        "urun": "Buğday",
+        "en_dusuk": 14.0,
+        "ortalama": 19.41,
+        "en_yuksek": 21.85,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "Kütlü Pamuk",
+        "en_dusuk": 33.0,
+        "ortalama": 42.57,
+        "en_yuksek": 52.25,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "İthal Preseli Pamuk",
+        "en_dusuk": 90.32,
+        "ortalama": 91.55,
+        "en_yuksek": 93.09,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "Preseli Pamuk St.1 Beyaz",
+        "en_dusuk": 15.2,
+        "ortalama": 82.09,
+        "en_yuksek": 95.0,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "Mısır",
+        "en_dusuk": 14.0,
+        "ortalama": 14.94,
+        "en_yuksek": 15.7,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "Yaglık Çigit",
+        "en_dusuk": 17.75,
+        "ortalama": 18.67,
+        "en_yuksek": 19.5,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      },
+      {
+        "urun": "Ham Pamuk Yağı",
+        "en_dusuk": 63.0,
+        "ortalama": 63.0,
+        "en_yuksek": 63.0,
+        "tarih": "2026-11-12",
+        "gun_once": 0
+      }
+    ]
+  },
+  "hatalar": {
+    "borsa": "503 Server Error: Service Unavailable for url: https://www.sutb.org.tr/"
+  }
+}
