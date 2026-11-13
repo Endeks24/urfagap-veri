@@ -1,68 +1,178 @@
 {
-  "olusturuldu": "2026-11-12T21:42:53",
+  "olusturuldu": "2026-11-13T21:10:43",
+  "borsa": {
+    "kaynak": "Şanlıurfa Ticaret Borsası (resmi site)",
+    "kaynak_url": "https://www.sutb.org.tr",
+    "satirlar": [
+      {
+        "urun": "Fıstık Boz Kavlak",
+        "en_dusuk": 650.0,
+        "ortalama": 675.0,
+        "en_yuksek": 700.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Preseli Pamuk 51 Renk",
+        "en_dusuk": 92.0,
+        "ortalama": 92.0,
+        "en_yuksek": 92.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Fıstık Kırmızı Kabuklu",
+        "en_dusuk": 580.0,
+        "ortalama": 600.0,
+        "en_yuksek": 640.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Makarnalık Buğday",
+        "en_dusuk": 19.0,
+        "ortalama": 19.75,
+        "en_yuksek": 20.5,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Kırmızı Kabuklu Mercimek",
+        "en_dusuk": 40.0,
+        "ortalama": 43.5,
+        "en_yuksek": 47.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Mısır",
+        "en_dusuk": 14.8,
+        "ortalama": 14.9,
+        "en_yuksek": 15.1,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Ekmeklik Buğday",
+        "en_dusuk": 18.5,
+        "ortalama": 19.75,
+        "en_yuksek": 20.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Preseli Pamuk 31 Renk",
+        "en_dusuk": 95.0,
+        "ortalama": 95.0,
+        "en_yuksek": 95.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Preseli Pamuk 41 Renk",
+        "en_dusuk": 94.0,
+        "ortalama": 94.0,
+        "en_yuksek": 94.0,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      },
+      {
+        "urun": "Arpa",
+        "en_dusuk": 13.9,
+        "ortalama": 14.1,
+        "en_yuksek": 14.3,
+        "tarih": "2026-09-29",
+        "gun_once": 45
+      }
+    ],
+    "son_bulten_tarihi": "2026-09-29",
+    "bayat_gun": 45
+  },
   "borsa_ikincil": {
     "kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)",
     "kaynak_url": "https://www.tarimfiyatlari.com.tr/borsa/sanliurfa",
     "satirlar": [
       {
         "urun": "Buğday",
-        "en_dusuk": 14.0,
-        "ortalama": 19.41,
-        "en_yuksek": 21.85,
-        "tarih": "2026-11-12",
+        "en_dusuk": 16.0,
+        "ortalama": 18.35,
+        "en_yuksek": 20.0,
+        "tarih": "2026-11-13",
+        "gun_once": 0
+      },
+      {
+        "urun": "Kırmızı Kabuklu Mercimek",
+        "en_dusuk": 36.9,
+        "ortalama": 42.67,
+        "en_yuksek": 46.2,
+        "tarih": "2026-11-13",
         "gun_once": 0
       },
       {
         "urun": "Kütlü Pamuk",
-        "en_dusuk": 33.0,
-        "ortalama": 42.57,
-        "en_yuksek": 52.25,
-        "tarih": "2026-11-12",
-        "gun_once": 0
-      },
-      {
-        "urun": "İthal Preseli Pamuk",
-        "en_dusuk": 90.32,
-        "ortalama": 91.55,
-        "en_yuksek": 93.09,
-        "tarih": "2026-11-12",
+        "en_dusuk": 31.5,
+        "ortalama": 40.81,
+        "en_yuksek": 45.2,
+        "tarih": "2026-11-13",
         "gun_once": 0
       },
       {
         "urun": "Preseli Pamuk St.1 Beyaz",
-        "en_dusuk": 15.2,
-        "ortalama": 82.09,
-        "en_yuksek": 95.0,
-        "tarih": "2026-11-12",
+        "en_dusuk": 88.0,
+        "ortalama": 90.93,
+        "en_yuksek": 93.5,
+        "tarih": "2026-11-13",
         "gun_once": 0
       },
       {
         "urun": "Mısır",
-        "en_dusuk": 14.0,
-        "ortalama": 14.94,
-        "en_yuksek": 15.7,
-        "tarih": "2026-11-12",
+        "en_dusuk": 12.48,
+        "ortalama": 14.28,
+        "en_yuksek": 15.45,
+        "tarih": "2026-11-13",
+        "gun_once": 0
+      },
+      {
+        "urun": "Nohut",
+        "en_dusuk": 35.0,
+        "ortalama": 36.5,
+        "en_yuksek": 38.0,
+        "tarih": "2026-11-13",
         "gun_once": 0
       },
       {
         "urun": "Yaglık Çigit",
-        "en_dusuk": 17.75,
-        "ortalama": 18.67,
-        "en_yuksek": 19.5,
-        "tarih": "2026-11-12",
+        "en_dusuk": 18.5,
+        "ortalama": 19.65,
+        "en_yuksek": 20.86,
+        "tarih": "2026-11-13",
+        "gun_once": 0
+      },
+      {
+        "urun": "Tohumluk Çiğit",
+        "en_dusuk": 17.0,
+        "ortalama": 17.0,
+        "en_yuksek": 17.0,
+        "tarih": "2026-11-13",
+        "gun_once": 0
+      },
+      {
+        "urun": "Sakatat",
+        "en_dusuk": 75.0,
+        "ortalama": 75.0,
+        "en_yuksek": 75.0,
+        "tarih": "2026-11-13",
         "gun_once": 0
       },
       {
         "urun": "Ham Pamuk Yağı",
-        "en_dusuk": 63.0,
-        "ortalama": 63.0,
-        "en_yuksek": 63.0,
-        "tarih": "2026-11-12",
+        "en_dusuk": 64.0,
+        "ortalama": 64.0,
+        "en_yuksek": 64.0,
+        "tarih": "2026-11-13",
         "gun_once": 0
       }
     ]
   },
-  "hatalar": {
-    "borsa": "503 Server Error: Service Unavailable for url: https://www.sutb.org.tr/"
-  }
+  "hatalar": {}
 }
