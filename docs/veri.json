@@ -1,5 +1,5 @@
 {
-  "olusturuldu": "2026-11-13T21:10:43",
+  "olusturuldu": "2026-11-16T23:38:05",
   "borsa": {
     "kaynak": "Şanlıurfa Ticaret Borsası (resmi site)",
     "kaynak_url": "https://www.sutb.org.tr",
@@ -10,7 +10,7 @@
         "ortalama": 675.0,
         "en_yuksek": 700.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Preseli Pamuk 51 Renk",
@@ -18,7 +18,7 @@
         "ortalama": 92.0,
         "en_yuksek": 92.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Fıstık Kırmızı Kabuklu",
@@ -26,7 +26,7 @@
         "ortalama": 600.0,
         "en_yuksek": 640.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Makarnalık Buğday",
@@ -34,7 +34,7 @@
         "ortalama": 19.75,
         "en_yuksek": 20.5,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Kırmızı Kabuklu Mercimek",
@@ -42,15 +42,15 @@
         "ortalama": 43.5,
         "en_yuksek": 47.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
-        "urun": "Mısır",
-        "en_dusuk": 14.8,
-        "ortalama": 14.9,
-        "en_yuksek": 15.1,
-        "tarih": "2026-09-29",
-        "gun_once": 45
+        "urun": "Mısır 15 Nem",
+        "en_dusuk": 14.5,
+        "ortalama": 14.6,
+        "en_yuksek": 14.7,
+        "tarih": "2026-11-14",
+        "gun_once": 2
       },
       {
         "urun": "Ekmeklik Buğday",
@@ -58,7 +58,7 @@
         "ortalama": 19.75,
         "en_yuksek": 20.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Preseli Pamuk 31 Renk",
@@ -66,7 +66,7 @@
         "ortalama": 95.0,
         "en_yuksek": 95.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Preseli Pamuk 41 Renk",
@@ -74,7 +74,7 @@
         "ortalama": 94.0,
         "en_yuksek": 94.0,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       },
       {
         "urun": "Arpa",
@@ -82,11 +82,11 @@
         "ortalama": 14.1,
         "en_yuksek": 14.3,
         "tarih": "2026-09-29",
-        "gun_once": 45
+        "gun_once": 48
       }
     ],
-    "son_bulten_tarihi": "2026-09-29",
-    "bayat_gun": 45
+    "son_bulten_tarihi": "2026-11-14",
+    "bayat_gun": 2
   },
   "borsa_ikincil": {
     "kaynak": "tarimfiyatlari.com.tr (borsa bülteninden derlenmiş, ikincil)",
@@ -98,7 +98,7 @@
         "ortalama": 18.35,
         "en_yuksek": 20.0,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Kırmızı Kabuklu Mercimek",
@@ -106,7 +106,7 @@
         "ortalama": 42.67,
         "en_yuksek": 46.2,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Kütlü Pamuk",
@@ -114,7 +114,7 @@
         "ortalama": 40.81,
         "en_yuksek": 45.2,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Preseli Pamuk St.1 Beyaz",
@@ -122,7 +122,7 @@
         "ortalama": 90.93,
         "en_yuksek": 93.5,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Mısır",
@@ -130,7 +130,7 @@
         "ortalama": 14.28,
         "en_yuksek": 15.45,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Nohut",
@@ -138,7 +138,7 @@
         "ortalama": 36.5,
         "en_yuksek": 38.0,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Yaglık Çigit",
@@ -146,7 +146,7 @@
         "ortalama": 19.65,
         "en_yuksek": 20.86,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Tohumluk Çiğit",
@@ -154,7 +154,7 @@
         "ortalama": 17.0,
         "en_yuksek": 17.0,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Sakatat",
@@ -162,7 +162,7 @@
         "ortalama": 75.0,
         "en_yuksek": 75.0,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       },
       {
         "urun": "Ham Pamuk Yağı",
@@ -170,7 +170,7 @@
         "ortalama": 64.0,
         "en_yuksek": 64.0,
         "tarih": "2026-11-13",
-        "gun_once": 0
+        "gun_once": 3
       }
     ]
   },
