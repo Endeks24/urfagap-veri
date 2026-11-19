@@ -1,0 +1,38 @@
+name: Paylaş sayfası haberleri
+
+on:
+  schedule:
+    # Yaklaşık 15 dakikada bir (GitHub zamanlaması birkaç dakika gecikebilir)
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paylas-sayfasi
+  cancel-in-progress: false
+
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: RSS'ten haberleri hazırla (başarısızsa eski dosya korunur)
+        run: python paylas_hazirla.py docs/paylas/haberler.json
+
+      - name: Değişiklik varsa kaydet (yalnızca haberler.json)
+        run: |
+          git config user.name  "urfagap-paylas-botu"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/paylas/haberler.json
+          git diff --cached --quiet && echo "Değişiklik yok" || (git commit -m "Paylaş sayfası haberleri: $(date -u +'%F %H:%M UTC')" && git pull --rebase -q && git push)
