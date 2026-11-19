@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>URFA GAP Paylaş</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="ikon-180.png">
+<link rel="icon" type="image/png" href="ikon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="UG Paylaş">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0b1f36">
+<style>
+:root{--ana:#0b1f36;--altin:#f6c453;--zemin:#eef2f6;--yuzey:#fff;--kenar:#d3dbe3;--metin:#14202c;--metin2:#5d6b79;--mavi:#14548c;--yesil:#0b7a4b;--kirmizi:#b3261e;--ig:#c13584;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--zemin:#0e151c;--yuzey:#17222d;--kenar:#2c3b4a;--metin:#eef2f6;--metin2:#a3b0bd;--mavi:#7fb3e6;--yesil:#4cc58f;--kirmizi:#ff8a80}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.45 -apple-system,system-ui,'Segoe UI',Roboto,sans-serif;background:var(--zemin);color:var(--metin);overflow-x:hidden}
+header{position:sticky;top:0;z-index:5;background:var(--ana);color:#fff;padding:calc(10px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) 12px calc(16px + env(safe-area-inset-left))}
+.bas{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto}.bas img{width:34px;height:34px;border-radius:8px}.bas b{font-size:18px;flex:1}
+.bas button{color:#fff;background:transparent;font:inherit;font-size:14px;border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:6px 12px;cursor:pointer}
+.suz{display:flex;gap:10px;align-items:center;max-width:1100px;margin:10px auto 0;flex-wrap:wrap}
+.suz input[type=search]{flex:1 1 220px;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border-radius:12px;border:0;background:#fff;color:#14202c}
+.suz label{font-size:14px;display:flex;gap:6px;align-items:center;white-space:nowrap}.suz small{opacity:.8;font-size:13px}
+main{max-width:1100px;margin:0 auto;padding:14px calc(16px + env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
+@media(min-width:700px){main{grid-template-columns:1fr 1fr}}
+.kart{background:var(--yuzey);border:1px solid var(--kenar);border-radius:14px;padding:12px;min-width:0}
+.kart.gizli{display:none}
+.ust{display:flex;gap:12px;min-width:0}.ust img,.ust .yok{width:76px;height:76px;border-radius:10px;object-fit:cover;flex:none;background:var(--kenar)}
+.bilgi{min-width:0;flex:1}
+h2{font-size:16px;line-height:1.3;margin:0 0 6px;font-weight:700;overflow-wrap:anywhere}h2 a{color:inherit;text-decoration:none}
+.meta{margin:0;font-size:13px;color:var(--metin2);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.kat{color:var(--mavi);font-weight:600}
+.rozet{background:var(--yesil);color:#fff;border-radius:999px;padding:1px 8px;font-size:12px;font-weight:600}
+.dugmeler{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.dg{flex:1 1 auto;font:inherit;font-size:15px;font-weight:600;text-align:center;text-decoration:none;cursor:pointer;border-radius:12px;padding:11px 12px;border:1px solid transparent;min-height:44px;display:inline-flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+.dg.x{background:#000;color:#fff}.dg.ig{background:var(--ig);color:#fff}.dg.duz{background:transparent;border-color:var(--kenar);color:var(--metin);flex:0 1 auto}
+.dg:disabled{opacity:.55}
+.dugmeler.tek{flex-wrap:nowrap}.dugmeler.tek .dg{padding:10px 8px;white-space:nowrap}.dugmeler.tek .x{flex:1 1 0}.dugmeler.tek .ig{flex:1.5 1 0}
+@media(max-width:420px){.dugmeler.tek .dg{font-size:14px}}
+.panel{margin-top:12px;border-top:1px solid var(--kenar);padding-top:12px}
+.panel label{display:block;font-size:13px;color:var(--metin2)}
+textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:16px;line-height:1.4;padding:10px;border-radius:10px;border:1px solid var(--kenar);background:var(--zemin);color:var(--metin);resize:vertical}
+.say{margin:4px 0 0;font-size:12px;color:var(--metin2);text-align:right}.say.fazla{color:var(--kirmizi)}
+.durum{margin:8px 0 0;font-size:14px;color:var(--metin2);min-height:1em}.durum.iyi{color:var(--yesil)}.durum.kotu{color:var(--kirmizi)}
+.yedek{margin-top:10px;font-size:14px}.yedek img{display:block;width:100%;max-width:320px;border-radius:10px;margin:8px 0;-webkit-touch-callout:default}
+.yedek a{color:var(--mavi);font-weight:600}
+.bos{grid-column:1/-1;text-align:center;color:var(--metin2);padding:30px 0}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="bas"><img src="ikon-192.png" alt=""><b>URFA GAP Paylaş</b><button type="button" id="yenile">Yenile</button></div>
+  <div class="suz">
+    <input type="search" id="ara" placeholder="Haber ara" autocomplete="off" enterkeyhint="search" aria-label="Haber ara">
+    <label><input type="checkbox" id="yalniz"> Paylaşılmayanlar</label>
+    <small id="sayi"></small>
+  </div>
+</header>
+<main id="liste"><p class="bos" id="bos">Haberler yükleniyor…</p></main>
+
+<script>
+(function(){
+'use strict'
+var ANAHTAR='ug-paylas-v1',D={},V={},HAZIR={}
+try{D=JSON.parse(localStorage.getItem(ANAHTAR)||'{}')||{}}catch(e){D={}}
+function sakla(){try{var k=Object.keys(D);if(k.length>300){k.sort(function(a,b){return (D[a].t||0)-(D[b].t||0)}).slice(0,k.length-300).forEach(function(x){delete D[x]})}localStorage.setItem(ANAHTAR,JSON.stringify(D))}catch(e){}}
+function katla(s){return String(s||'').replace(/İ/g,'i').replace(/I/g,'ı').toLowerCase().replace(/ı/g,'i').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ö/g,'o').replace(/ç/g,'c').normalize('NFD').replace(/[̀-ͯ]/g,'')}
+var liste=document.getElementById('liste'),ara=document.getElementById('ara'),yalniz=document.getElementById('yalniz'),sayi=document.getElementById('sayi'),bos=document.getElementById('bos')
+var kartlar=[]
+var AY=['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara']
+function saatYaz(iso){
+  var t=Date.parse(iso);if(isNaN(t))return ''
+  var d=new Date(t+3*3600000),bugun=new Date(Date.now()+3*3600000),hm=d.toISOString().slice(11,16)
+  return d.toISOString().slice(0,10)===bugun.toISOString().slice(0,10)?hm:(+d.toISOString().slice(8,10))+' '+AY[+d.toISOString().slice(5,7)-1]+' '+hm
+}
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+function guvenliUrl(u,onek){return typeof u==='string'&&u.indexOf(onek)===0?u:''}
+
+function kartYap(h){
+  var k=el('article','kart');k.dataset.id=h.id;k.dataset.ara=katla(h.baslik+' '+h.kat)
+  var ust=el('div','ust'),kucuk=guvenliUrl(h.kucuk,'https://urfagapcom.teimg.com/')
+  if(kucuk){var im=el('img');im.src=kucuk;im.alt='';im.loading='lazy';im.width=200;im.height=200;ust.appendChild(im)}else ust.appendChild(el('span','yok'))
+  var bilgi=el('div','bilgi'),b=el('h2'),a=el('a',null,h.baslik)
+  a.href=guvenliUrl(h.url,'https://www.urfagap.com/')||'#';a.target='_blank';a.rel='noopener';b.appendChild(a)
+  var meta=el('p','meta');meta.appendChild(el('time',null,saatYaz(h.zaman)))
+  if(h.kat)meta.appendChild(el('span','kat',h.kat))
+  var r=el('span','rozet');r.hidden=true;meta.appendChild(r)
+  bilgi.appendChild(b);bilgi.appendChild(meta);ust.appendChild(bilgi);k.appendChild(ust)
+
+  var dg=el('div','dugmeler tek')
+  var x=el('a','dg x',"X'te paylaş");x.href=guvenliUrl(h.x,'https://x.com/intent/post?')||'#';x.target='_blank';x.rel='noopener'
+  var ig=el('button','dg ig',"Instagram'da paylaş");ig.type='button'
+  var mt=el('button','dg duz','Metin');mt.type='button';mt.setAttribute('aria-expanded','false')
+  dg.appendChild(x);dg.appendChild(ig);dg.appendChild(mt);k.appendChild(dg)
+
+  var p=el('div','panel');p.hidden=true
+  var lb=el('label','','Instagram metni'),ta=el('textarea');ta.rows=8;ta.spellcheck=true;lb.appendChild(ta)
+  var say=el('p','say'),dg2=el('div','dugmeler'),kop=el('button','dg duz','Kopyala'),gor=el('button','dg ig','Görseli paylaş')
+  kop.type='button';gor.type='button';dg2.appendChild(kop);dg2.appendChild(gor)
+  var durum=el('p','durum');durum.setAttribute('role','status')
+  var yedek=el('div','yedek');yedek.hidden=true
+  p.appendChild(lb);p.appendChild(say);p.appendChild(dg2);p.appendChild(durum);p.appendChild(yedek);k.appendChild(p)
+
+  function sayYaz(){var n=ta.value.length;say.textContent=n+' / 2200';say.classList.toggle('fazla',n>2200)}
+  function rozetYaz(){var d=D[h.id],l=[];if(d&&d.x)l.push('X');if(d&&d.ig)l.push('Instagram');r.hidden=!l.length;r.textContent=l.length?'Paylaşıldı: '+l.join(', '):''}
+  function isaretle(tur){D[h.id]=D[h.id]||{};D[h.id][tur]=1;D[h.id].t=Date.now();sakla();rozetYaz();suz()}
+  function dur(m,t){durum.textContent=m;durum.className='durum'+(t?' '+t:'')}
+  function panelAc(){if(p.hidden){p.hidden=false;mt.setAttribute('aria-expanded','true');if(!ta.value)ta.value=h.caption||'';sayYaz();gorselHazirla(h).catch(function(){})}}
+  function kopyala(){
+    panelAc();var metin=ta.value
+    function yed(){var ok=false;try{ta.focus();ta.select();ta.setSelectionRange(0,metin.length);ok=document.execCommand('copy')}catch(e){}
+      dur(ok?'Metin panoya kopyalandı.':'Kopyalanamadı. Metin seçili, Kopyala menüsüyle kopyalayın.',ok?'iyi':'kotu');return ok}
+    try{if(navigator.clipboard&&navigator.clipboard.writeText&&window.isSecureContext)return navigator.clipboard.writeText(metin).then(function(){dur('Metin panoya kopyalandı.','iyi');return true},yed)}catch(e){}
+    return Promise.resolve(yed())
+  }
+  function yedekGoster(file){
+    var u=URL.createObjectURL(file);yedek.hidden=false;yedek.textContent=''
+    var pp=el('p',null,"Paylaşım menüsü açılamadı. Görseli indirin ya da üstüne uzun basıp Fotoğraflara kaydedin, sonra Instagram'da paylaşın.")
+    var im2=el('img');im2.src=u;im2.alt='Instagram görseli'
+    var a2=el('a',null,'Görseli indir (1080x1350 JPEG)');a2.href=u;a2.download=file.name;a2.addEventListener('click',function(){isaretle('ig')})
+    yedek.appendChild(pp);yedek.appendChild(im2);yedek.appendChild(a2)
+  }
+  function paylas(file){
+    var v={files:[file],text:ta.value},v2={files:[file]},s=null
+    try{if(navigator.share&&navigator.canShare){if(navigator.canShare(v))s=v;else if(navigator.canShare(v2))s=v2}}catch(e){}
+    if(!s){yedekGoster(file);dur('Bu cihaz dosya paylaşımını desteklemiyor.','kotu');return Promise.resolve()}
+    return navigator.share(s).then(function(){isaretle('ig');dur("Paylaşım menüsü açıldı. Metin panoda, Instagram'da yapıştırın.",'iyi')},function(e){
+      var ad=e&&e.name
+      if(ad==='AbortError')dur('Paylaşım iptal edildi.')
+      else if(ad==='NotAllowedError')dur('Görsel hazır. Paylaşım menüsü için "Görseli paylaş" düğmesine dokunun.')
+      else{yedekGoster(file);dur('Paylaşım menüsü açılamadı.','kotu')}
+    })
+  }
+  function instagram(btn){
+    kopyala() // pano, dokunuş anında yazılır
+    if(!(h.ig_gorsel||h.ig_yedek)){dur('Metin kopyalandı. Bu haberin kapak görseli yok.','kotu');return}
+    btn.disabled=true;dur('Görsel hazırlanıyor…')
+    gorselHazirla(h).then(paylas,function(e){dur('Görsel hazırlanamadı: '+(e&&e.message||e),'kotu')}).then(function(){btn.disabled=false})
+  }
+  x.addEventListener('click',function(){isaretle('x')})
+  ig.addEventListener('click',function(){instagram(ig)})
+  gor.addEventListener('click',function(){instagram(gor)})
+  kop.addEventListener('click',kopyala)
+  ta.addEventListener('input',sayYaz)
+  mt.addEventListener('click',function(){if(p.hidden)panelAc();else{p.hidden=true;mt.setAttribute('aria-expanded','false')}})
+  rozetYaz()
+  return k
+}
+
+// Instagram için 1080x1350 JPEG. Görsel sunucusu CORS'a izin verir; olmazsa 1280x720 kaynaktan tuvalde üretilir.
+function jpegYap(blob){return new Promise(function(ok,red){
+  var u=URL.createObjectURL(blob),im=new Image()
+  im.onload=function(){
+    if(blob.type==='image/jpeg'&&im.naturalWidth===1080&&im.naturalHeight===1350){URL.revokeObjectURL(u);ok(blob);return}
+    try{var c=document.createElement('canvas');c.width=1080;c.height=1350;var x=c.getContext('2d'),o=Math.max(1080/im.naturalWidth,1350/im.naturalHeight),w=im.naturalWidth*o,hh=im.naturalHeight*o
+      x.fillStyle='#fff';x.fillRect(0,0,1080,1350);x.drawImage(im,(1080-w)/2,(1350-hh)/2,w,hh)
+      c.toBlob(function(b){URL.revokeObjectURL(u);b?ok(b):red(new Error('jpeg'))},'image/jpeg',0.9)}catch(e){URL.revokeObjectURL(u);red(e)}}
+  im.onerror=function(){URL.revokeObjectURL(u);red(new Error('görsel açılamadı'))}
+  im.src=u})}
+function getir(yol){
+  if(yol.indexOf('https://urfagapcom.teimg.com/')!==0)return Promise.reject(new Error('geçersiz görsel adresi'))
+  return fetch(yol,{mode:'cors',credentials:'omit',referrerPolicy:'no-referrer'}).then(function(r){
+    if(!r.ok||!/^image\//.test(r.headers.get('content-type')||''))throw new Error('HTTP '+r.status);return r.blob()})}
+function gorselHazirla(h){
+  if(HAZIR[h.id])return HAZIR[h.id]
+  HAZIR[h.id]=getir(h.ig_gorsel||h.ig_yedek).then(jpegYap).catch(function(){return h.ig_yedek?getir(h.ig_yedek).then(jpegYap):Promise.reject(new Error('görsel alınamadı'))})
+    .then(function(b){return new File([b],'urfagap-'+h.id+'.jpg',{type:'image/jpeg',lastModified:Date.now()})})
+  HAZIR[h.id].catch(function(){delete HAZIR[h.id]})
+  return HAZIR[h.id]
+}
+
+function suz(){
+  var q=katla(ara.value).split(/\s+/).filter(Boolean),n=0
+  kartlar.forEach(function(k){var d=D[k.dataset.id],g=q.every(function(w){return k.dataset.ara.indexOf(w)>=0})&&!(yalniz.checked&&d&&(d.x||d.ig));k.classList.toggle('gizli',!g);if(g)n++})
+  sayi.textContent=n+' haber';bos.hidden=n>0;if(!n&&kartlar.length)bos.textContent='Gösterilecek haber yok.'
+}
+ara.addEventListener('input',suz);yalniz.addEventListener('change',suz)
+
+function yukle(){
+  bos.hidden=false;bos.textContent='Haberler yükleniyor…'
+  return fetch('haberler.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){
+    var ha=(d&&d.haberler)||[];kartlar.forEach(function(k){k.remove()});kartlar=[];V={}
+    ha.forEach(function(h){V[h.id]=h;var k=kartYap(h);kartlar.push(k);liste.insertBefore(k,bos)})
+    if(!ha.length){bos.hidden=false;bos.textContent='Gösterilecek haber yok.'}
+    suz()
+  }).catch(function(e){bos.hidden=false;bos.textContent='Haberler yüklenemedi ('+(e&&e.message||e)+'). Yenile düğmesini deneyin.'})
+}
+document.getElementById('yenile').addEventListener('click',yukle)
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&kartlar.length)yukle()})
+yukle()
+})()
+</script>
+</body>
+</html>
