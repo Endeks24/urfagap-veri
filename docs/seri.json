@@ -1,5 +1,5 @@
 {
- "guncellendi": "2026-11-13",
+ "guncellendi": "2026-11-23",
  "kaynak": "Şanlıurfa Ticaret Borsası (URFA GAP Veri Merkezi arşivi)",
  "seri": {
   "Buğday": [
@@ -62,12 +62,20 @@
    [
     "2026-09-29",
     675.0
+   ],
+   [
+    "2026-11-23",
+    645.0
    ]
   ],
   "Kırmızı Kabuklu Mercimek": [
    [
     "2026-09-29",
     43.5
+   ],
+   [
+    "2026-11-23",
+    42.5
    ]
   ]
  }
